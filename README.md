@@ -33,14 +33,17 @@ http {
 					enough then there is no need to go that high.
 				--]]
 				statsd:flush()
-			';		}	}}
+			';
+		}
+	}
+}
 ```
 
 ## Installation
 
 1. Install Nginx with the ngx_lua_module
 2. Add the ```lib/statsd.lua``` file to your LUA_PATH somewhere
-3. Instantiate a statsd logger instance somewhere in an init block, I suggest in the ```init_worker_by_lua``` phase.
+3. Instantiate a statsd logger instance somewhere in an init block, I suggest in the ```init_worker_by_lua``` phase if you are on the cutting-edge ```0.9.5``` version of ngx_lua_module.
 4. Win and profit.
 
 ## Warranty
